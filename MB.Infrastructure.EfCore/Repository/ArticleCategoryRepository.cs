@@ -15,10 +15,10 @@ namespace MB.Infrastructure.EfCore.Repository
 
         public List<ArticleCategory> GetAll()
         {
-           return _context.ArticleCategories.ToList();
+           return _context.ArticleCategories.OrderByDescending(x=>x.Id).ToList();
         }
 
-        public void Create(ArticleCategory entity)
+        public void Add(ArticleCategory entity)
         {
             _context.ArticleCategories.Add(entity);
             _context.SaveChanges();

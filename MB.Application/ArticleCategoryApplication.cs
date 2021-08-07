@@ -33,5 +33,11 @@ namespace MB.Application
 
             return result;
         }
+
+        public void Create(CreateArticleCategory commad)
+        {
+            var articleCategory = new ArticleCategory(commad.Title);
+            _articleCategoryRepository.Add(articleCategory);
+        }
     }
 }

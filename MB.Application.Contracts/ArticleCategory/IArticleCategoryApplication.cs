@@ -4,6 +4,7 @@ namespace MB.Application.Contracts.ArticleCategory
 {
     public interface IArticleCategoryApplication
     {
-        public List<ArticleCategoryViewModel> List();
+        List<ArticleCategoryViewModel> List();
+        void Create(CreateArticleCategory commad);
     }
 }
