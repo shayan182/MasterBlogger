@@ -1,0 +1,40 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<main class="posts-listing col-lg-12">
+    <div class="container">
+        <div class="row">
+
+         
+                <div class="post col-xl-6">
+                    <div class="post-thumbnail">
+                        <a>
+                            <img  src="~/img/blog-post-1.jpeg" class="img-fluid">
+                        </a>
+                    </div>
+                    <div class="post-details">
+                        <div class="post-meta d-flex justify-content-between">
+                            <div class="date meta-last"></div>
+                            <div class="category">
+                                <a asp-page="/ArticleDetails"></a>
+                            </div>
+                        </div>
+                        <a asp-page="/ArticleDetails">
+                            <h3 class="h4">lorem100</h3>
+                        </a>
+                        <p class="text-muted">
+                           
+                        </p>
+                        <footer class="post-footer d-flex align-items-center">
+                            <div class="comments meta-last"><i class="icon-comment"></i></div>
+                        </footer>
+                    </div>
+                </div>
+            
+
+        </div>
+    </div>
+</main>

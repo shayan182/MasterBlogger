@@ -3,13 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MB.Domain", "MB.Domain\MB.Domain.csproj", "{49E18E83-5C62-416E-A4CB-B04D0409D085}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MB.Domain", "MB.Domain\MB.Domain.csproj", "{49E18E83-5C62-416E-A4CB-B04D0409D085}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MB.Application.Contracts", "MB.Application.Contracts\MB.Application.Contracts.csproj", "{B7CB7CD1-73B3-4AFB-AB33-45ACC5ACB569}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MB.Application.Contracts", "MB.Application.Contracts\MB.Application.Contracts.csproj", "{B7CB7CD1-73B3-4AFB-AB33-45ACC5ACB569}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MB.Application", "MB.Application\MB.Application.csproj", "{C5BAD235-726D-4C54-A613-8B64760137D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MB.Application", "MB.Application\MB.Application.csproj", "{C5BAD235-726D-4C54-A613-8B64760137D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MB.Infrastructure.EfCore", "MB.Infrastructure.EfCore\MB.Infrastructure.EfCore.csproj", "{2E7F8F2D-B886-431D-A87C-D9E02DB0AFF5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MB.Infrastructure.EfCore", "MB.Infrastructure.EfCore\MB.Infrastructure.EfCore.csproj", "{2E7F8F2D-B886-431D-A87C-D9E02DB0AFF5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MB.Presentation.MVCCore", "MB.Presentation.MVCCore\MB.Presentation.MVCCore.csproj", "{5342BEC3-873A-47D0-A081-307C34F775D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MB.Infrastructure.Core", "MB.Infrastructure.Core\MB.Infrastructure.Core.csproj", "{A7B69963-B3A9-4275-BC04-A1F402118EB7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{2E7F8F2D-B886-431D-A87C-D9E02DB0AFF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E7F8F2D-B886-431D-A87C-D9E02DB0AFF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E7F8F2D-B886-431D-A87C-D9E02DB0AFF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5342BEC3-873A-47D0-A081-307C34F775D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5342BEC3-873A-47D0-A081-307C34F775D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5342BEC3-873A-47D0-A081-307C34F775D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5342BEC3-873A-47D0-A081-307C34F775D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7B69963-B3A9-4275-BC04-A1F402118EB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7B69963-B3A9-4275-BC04-A1F402118EB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7B69963-B3A9-4275-BC04-A1F402118EB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7B69963-B3A9-4275-BC04-A1F402118EB7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
