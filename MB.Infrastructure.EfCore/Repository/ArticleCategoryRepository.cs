@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using MB.Application.Contracts.ArticleCategory;
 using MB.Domain.ArticleCategoryAgg;
 
 namespace MB.Infrastructure.EfCore.Repository
@@ -15,12 +16,22 @@ namespace MB.Infrastructure.EfCore.Repository
 
         public List<ArticleCategory> GetAll()
         {
-           return _context.ArticleCategories.OrderByDescending(x=>x.Id).ToList();
+            return _context.ArticleCategories.OrderByDescending(x => x.Id).ToList();
         }
 
         public void Add(ArticleCategory entity)
         {
             _context.ArticleCategories.Add(entity);
+            Save();
+        }
+
+        public ArticleCategory Get(long id)
+        {
+            return _context.ArticleCategories.FirstOrDefault(x => x.Id == id);
+        }
+
+        public void Save()
+        {
             _context.SaveChanges();
         }
     }

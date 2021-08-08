@@ -2,7 +2,7 @@
 
 namespace MB.Domain.ArticleCategoryAgg
 {
-     public class ArticleCategory
+    public class ArticleCategory
     {
         public long Id { get; private set; }
         public string Title { get; private set; }
@@ -15,7 +15,19 @@ namespace MB.Domain.ArticleCategoryAgg
             CreationDate = DateTime.Now;
         }
 
-         
+        public void Rename(string title)
+        {
+            Title = title;
+        }
 
+        public void Remove()
+        {
+            IsDeleted = true;
+        }
+
+        public void Activate()
+        {
+            IsDeleted = false;
+        }
     }
 }
