@@ -15,7 +15,11 @@ namespace MB.Domain.ArticleAgg
             IsDeleted = false;
             CreationDate = DateTime.Now;
         }
-        
+
+        protected Article()
+        {
+            
+        }
         public long Id { get; private set; }
         public string Title { get; private set; }
         public string ShortDescription { get; private set; }
@@ -23,7 +27,7 @@ namespace MB.Domain.ArticleAgg
         public string Content { get; private set; }
         public bool IsDeleted { get; private set; }
         public DateTime CreationDate { get; private set; }
-        public int ArticleCategoryId { get; private set; }
+        public long ArticleCategoryId { get; private set; }
         public ArticleCategory ArticleCategory { get; private set; }
         
     }

@@ -8,5 +8,6 @@ namespace MB.Application.Contracts.ArticleAgg
 {
     public interface IArticleRepository
     {
+        List<ArticleViewModel> GetList();
     }
 }

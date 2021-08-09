@@ -7,7 +7,18 @@ using MB.Application.Contracts.ArticleAgg;
 
 namespace MB.Application
 {
-    class ArticleApplication : IArticleApplication
+    public class ArticleApplication : IArticleApplication
     {
+        private readonly IArticleRepository _articleRepository;
+
+        public ArticleApplication(IArticleRepository articleRepository)
+        {
+            _articleRepository = articleRepository;
+        }
+
+        public List<ArticleViewModel> GetList()
+        {
+           return _articleRepository.GetList();
+        }
     }
 }

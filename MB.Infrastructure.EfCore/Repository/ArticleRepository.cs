@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using MB.Application.Contracts.ArticleAgg;
+using Microsoft.EntityFrameworkCore;
 
 namespace MB.Infrastructure.EfCore.Repository
 {
@@ -15,6 +14,21 @@ namespace MB.Infrastructure.EfCore.Repository
         {
             _context = context;
         }
-        
+
+        public List<ArticleViewModel> GetList()
+        {
+            return _context.Articles
+                .Include(x=>x.ArticleCategory)
+                .Select(x=>new ArticleViewModel
+                {
+                    Id = x.Id,
+                    Title = x.Title,
+                    ArticleCategory = x.ArticleCategory.Title,
+                    CreationDate = x.CreationDate.ToString(CultureInfo.InvariantCulture),
+                    IsDeleted = x.IsDeleted
+                })
+                .ToList();
+            
+        }
     }
 }

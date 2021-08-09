@@ -10,6 +10,19 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Areas\Administrator\Pages\ArticleCategoryManagement\Create.cshtml" />
+    <None Include="Areas\Administrator\Pages\ArticleCategoryManagement\Edit.cshtml" />
+    <None Include="Areas\Administrator\Pages\ArticleCategoryManagement\List.cshtml" />
+    <None Include="Areas\Administrator\Pages\Error.cshtml" />
+    <None Include="Areas\Administrator\Pages\Index.cshtml" />
+    <None Include="Areas\Administrator\Pages\Privacy.cshtml" />
+    <None Include="Areas\Administrator\Pages\Shared\_Layout.cshtml" />
+    <None Include="Areas\Administrator\Pages\Shared\_ValidationScriptsPartial.cshtml" />
+    <None Include="Areas\Administrator\Pages\_ViewImports.cshtml" />
+    <None Include="Areas\Administrator\Pages\_ViewStart.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\MB.Application.Contracts\MB.Application.Contracts.csproj" />
     <ProjectReference Include="..\MB.Infrastructure.Core\MB.Infrastructure.Core.csproj" />
   </ItemGroup>
