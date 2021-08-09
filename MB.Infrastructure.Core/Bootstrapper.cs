@@ -1,6 +1,7 @@
 ﻿using MB.Application;
 using MB.Application.Contracts.ArticleAgg;
 using MB.Application.Contracts.ArticleCategory;
+using MB.Domain.ArticleAgg;
 using MB.Domain.ArticleCategoryAgg;
 using MB.Domain.ArticleCategoryAgg.Services;
 using MB.Infrastructure.EfCore;

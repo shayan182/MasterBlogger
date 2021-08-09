@@ -2,6 +2,7 @@
 using System.Globalization;
 using System.Linq;
 using MB.Application.Contracts.ArticleAgg;
+using MB.Domain.ArticleAgg;
 using Microsoft.EntityFrameworkCore;
 
 namespace MB.Infrastructure.EfCore.Repository
@@ -29,6 +30,12 @@ namespace MB.Infrastructure.EfCore.Repository
                 })
                 .ToList();
             
+        }
+
+        public void CreateAndSave(Article entity)
+        {
+            _context.Articles.Add(entity);
+            _context.SaveChanges();
         }
     }
 }

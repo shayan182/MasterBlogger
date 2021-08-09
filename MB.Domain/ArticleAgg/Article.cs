@@ -5,7 +5,7 @@ namespace MB.Domain.ArticleAgg
 {
     public class Article
     {
-        public Article(string title, string shortDescription, string image, string content, int articleCategoryId)
+        public Article(string title, string shortDescription, string image, string content, long articleCategoryId)
         {
             Title = title;
             ShortDescription = shortDescription;
