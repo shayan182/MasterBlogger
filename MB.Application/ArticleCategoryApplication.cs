@@ -2,16 +2,19 @@
 using System.Globalization;
 using MB.Application.Contracts.ArticleCategory;
 using MB.Domain.ArticleCategoryAgg;
+using MB.Domain.ArticleCategoryAgg.Services;
 
 namespace MB.Application
 {
     public class ArticleCategoryApplication : IArticleCategoryApplication
     {
         private readonly IArticleCategoryRepository _articleCategoryRepository;
+        private readonly IArticleCategoryValidatorService _validatorService;
 
-        public ArticleCategoryApplication(IArticleCategoryRepository articleCategoryRepository)
+        public ArticleCategoryApplication(IArticleCategoryRepository articleCategoryRepository, IArticleCategoryValidatorService validatorService)
         {
             _articleCategoryRepository = articleCategoryRepository;
+            _validatorService = validatorService;
         }
 
         public List<ArticleCategoryViewModel> List()
@@ -34,7 +37,7 @@ namespace MB.Application
 
         public void Create(CreateArticleCategory command)
         {
-            var articleCategory = new ArticleCategory(command.Title);
+            var articleCategory = new ArticleCategory(command.Title ,_validatorService);
             _articleCategoryRepository.Add(articleCategory);
         }
 
