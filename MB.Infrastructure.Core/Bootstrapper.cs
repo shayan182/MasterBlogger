@@ -1,4 +1,5 @@
 ﻿using MB.Application;
+using MB.Application.Contracts.Article;
 using MB.Application.Contracts.ArticleAgg;
 using MB.Application.Contracts.ArticleCategory;
 using MB.Domain.ArticleAgg;
