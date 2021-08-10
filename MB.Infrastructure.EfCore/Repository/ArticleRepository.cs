@@ -47,5 +47,10 @@ namespace MB.Infrastructure.EfCore.Repository
         {
             _context.SaveChanges();
         }
+
+        public bool Exists(string title)
+        {
+           return _context.Articles.Any(x => x.Title == title);
+        }
     }
 }
