@@ -13,7 +13,7 @@
 
                 <div class="post col-xl-6">
                     <div class="post-thumbnail">
-                        <a>
+                        <a asp-page="/ArticleDetails" asp-route-id="@article.Id">
                             <img  src="@article.Image" title="@article.Title" alt="@article.Title" class="img-fluid">
                         </a>
                     </div>
@@ -21,10 +21,10 @@
                         <div class="post-meta d-flex justify-content-between">
                             <div class="date meta-last">@article.CreationDate</div>
                             <div class="category">
-                                <a asp-page="/ArticleDetails">@article.ArticleCategory</a>
+                                <a asp-route-id="@article.Id" asp-page="/ArticleDetails">@article.ArticleCategory</a>
                             </div>
                         </div>
-                        <a asp-page="/ArticleDetails">
+                        <a asp-page="/ArticleDetails" asp-route-id="@article.Id">
                             <h3 class="h4">@article.Title</h3>
                         </a>
                         <p class="text-muted">

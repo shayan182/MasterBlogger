@@ -5,5 +5,6 @@ namespace MB.Infrastructure.Query
      public interface IArticleQuery
      {
          List<ArticleQueryView> GetAll();
+         ArticleQueryView GetArticle(long id);
      }
 }
