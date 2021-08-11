@@ -8,31 +8,34 @@
     <div class="container">
         <div class="row">
 
-         
+         @foreach (var article in Model.Articles)
+         {
+
                 <div class="post col-xl-6">
                     <div class="post-thumbnail">
                         <a>
-                            <img  src="~/img/blog-post-1.jpeg" class="img-fluid">
+                            <img  src="@article.Image" title="@article.Title" alt="@article.Title" class="img-fluid">
                         </a>
                     </div>
                     <div class="post-details">
                         <div class="post-meta d-flex justify-content-between">
-                            <div class="date meta-last"></div>
+                            <div class="date meta-last">@article.CreationDate</div>
                             <div class="category">
-                                <a asp-page="/ArticleDetails"></a>
+                                <a asp-page="/ArticleDetails">@article.ArticleCategory</a>
                             </div>
                         </div>
                         <a asp-page="/ArticleDetails">
-                            <h3 class="h4">lorem100</h3>
+                            <h3 class="h4">@article.Title</h3>
                         </a>
                         <p class="text-muted">
-                           
+                           @article.ShortDescription
                         </p>
                         <footer class="post-footer d-flex align-items-center">
-                            <div class="comments meta-last"><i class="icon-comment"></i></div>
+                            <div class="comments meta-last"><i class="icon-comment"></i>12</div>
                         </footer>
                     </div>
                 </div>
+         }
             
 
         </div>

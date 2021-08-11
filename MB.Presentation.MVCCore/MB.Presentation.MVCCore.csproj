@@ -25,6 +25,7 @@
   <ItemGroup>
     <ProjectReference Include="..\MB.Application.Contracts\MB.Application.Contracts.csproj" />
     <ProjectReference Include="..\MB.Infrastructure.Core\MB.Infrastructure.Core.csproj" />
+    <ProjectReference Include="..\MB.Infrsatructure.Query\MB.Infrastructure.Query.csproj" />
   </ItemGroup>
 
 </Project>
