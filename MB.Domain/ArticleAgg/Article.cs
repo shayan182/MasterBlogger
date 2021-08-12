@@ -36,6 +36,7 @@ namespace MB.Domain.ArticleAgg
             ArticleCategoryId = articleCategoryId;
             IsDeleted = false;
             CreationDate = DateTime.Now;
+            Comments = new List<Comment>();
         }
 
         private void Validate (string title ,long articleCategoryId)

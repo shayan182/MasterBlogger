@@ -31,7 +31,6 @@ namespace MB.Domain.CommentAgg
             ArticleId = articleId;
             CreationDate = DateTime.Now;
             Status = Statuses.New;
-            Comments = new List<Comment>();
         }
 
     }
