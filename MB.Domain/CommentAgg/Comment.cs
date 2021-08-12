@@ -17,6 +17,7 @@ namespace MB.Domain.CommentAgg
         public DateTime CreationDate { get; private set; }
         public long ArticleId { get; set; }
         public Article Article { get; set; }
+        
 
         protected Comment()
         {
@@ -30,6 +31,7 @@ namespace MB.Domain.CommentAgg
             ArticleId = articleId;
             CreationDate = DateTime.Now;
             Status = Statuses.New;
+            Comments = new List<Comment>();
         }
 
     }
