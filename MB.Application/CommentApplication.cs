@@ -16,7 +16,7 @@ namespace MB.Application
         public void Add(AddComment command)
         {
             var comment = new Comment(command.Name, command.Email, command.Message, command.ArticleId);
-            _commentRepository.CreateAndSave(comment);
+            _commentRepository.Create(comment);
         }
 
         public List<CommentViewModel> GetList()
@@ -28,14 +28,14 @@ namespace MB.Application
         {
             var comment = _commentRepository.Get(id);
             comment.Confirm();
-            _commentRepository.Save();
+            //_commentRepository.Save();
         }
 
         public void Cancel(long id)
         {
             var comment = _commentRepository.Get(id);
             comment.Cancel();
-            _commentRepository.Save();
+            //_commentRepository.Save();
         }
     }
 }
