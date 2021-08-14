@@ -27,7 +27,7 @@ namespace MB.Infrastructure.EfCore.Repository
                     ArticleCategory = x.ArticleCategory.Title,
                     CreationDate = x.CreationDate.ToString(CultureInfo.InvariantCulture),
                     IsDeleted = x.IsDeleted
-                })
+                }).OrderByDescending(x=>x.Id)
                 .ToList();
             
         }

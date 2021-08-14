@@ -34,32 +34,35 @@
                     <p>
                         @Model.Article.ShortDescription
                     </p>
-                   @Model.Article.Content
+                    @Model.Article.Content
 
                 </div>
 
 
                 <div class="post-comments">
                     <header>
-                        <h3 class="h6">Post Comments<span class="no-of-comments">     </span></h3>
+                        <h3 class="h6">Post Comments<span class="no-of-comments"> (@Model.Article.CommentsCount) </span></h3>
                     </header>
-                   
+                    @foreach (var commet in Model.Article.Comments)
+                    {
                         <div class="comment">
                             <div class="comment-header d-flex justify-content-between">
                                 <div class="user d-flex align-items-center">
                                     <div class="image">
-                                        <img src="~/img/user.svg" alt="..." class="img-fluid rounded-circle">
+                                        <img src="~/img/user.svg" alt=".." class="img-fluid rounded-circle">
                                     </div>
                                     <div class="title">
-                                        <strong>   </strong><span class="date">   </span>
+                                        <strong> @commet.Name  </strong><span class="date"> @commet.CreationDate  </span>
                                     </div>
                                 </div>
                             </div>
                             <div class="comment-body">
-                                <p>   </p>
+                                <p> @commet.Message  </p>
                             </div>
                         </div>
+
                     }
+
 
                 </div>
 
